@@ -1,0 +1,464 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+body {
+    font-family: "Roboto", sans-serif;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #151515;
+    width: 100%;
+    min-height: 100vh;
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+}
+
+a {
+    text-decoration: none;
+}
+
+#loading-screen {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #151515;
+    z-index: 1000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+
+#loading-bar {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 0%;
+    background-color: var(--color-green);
+}
+
+#loading-text {
+    position: absolute;
+    color: var(--color-white);
+    font-size: 3rem;
+    z-index: 10;
+}
+
+
+:root {
+    --color-green: #8FE20E;
+    --color-black: #202020;
+    --color-white: #fafafa;
+}
+
+.container {
+    display: inline;
+    border-radius: 20px;
+    width: 95%;
+    max-width: 400px;
+    background-color: #000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: .8rem;
+}
+
+.content {
+    min-width: 320px;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+/****************** WIDGET 1 */
+.widget1 {
+    width: 100%;
+    height: 16%;
+    background-color: var(--color-black);
+    border-radius: 12px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem;
+}
+
+.widget1 img {
+    width: 100%;
+    border-radius: 8px;
+}
+
+.info-user {
+    width: 80%;
+    display: flex;
+    flex-direction: row;
+    justify-content: left;
+    align-items: center;
+    text-align: left;
+    gap: 0.6rem;
+}
+
+.img-user {
+    width: 50px;
+    height: 50px;
+    border-radius: 8px;
+    border: 2px solid var(--color-green);
+}
+
+.name-user h1 {
+    font-size: 1.2rem;
+    color: var(--color-white);
+    padding-bottom: 0.2rem;
+    font-weight: bold;
+}
+
+.name-user span {
+    color: #fafafab4;
+    font-size: 0.8rem;
+}
+
+.info-icon {
+    width: 35px;
+    display: flex;
+    justify-content: right;
+    align-items: center;
+}
+
+.info-icon img {
+    width: 100%;
+    animation: rotate 5s linear infinite;
+}
+
+/****************** WIDGET 2 */
+.widget2 {
+    width: 100%;
+    height: 16%;
+    background-color: var(--color-black);
+    border-radius: 12px;
+    padding: 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.hard-skills {
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+    gap: 0.4rem;
+}
+
+.destaque {
+    color: var(--color-green);
+    font-weight: bold;
+    font-size: 1rem;
+    padding-bottom: 0.3rem;
+}
+
+.skills-icons {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.skills-icons i {
+    color: #fff;
+    font-size: 1.4rem;
+    transition: color 0.3s;
+}
+
+.skills-icons i:hover {
+    cursor: pointer;
+}
+
+/* Cores específicas para cada ícone */
+.skills-icons .fa-html5:hover {
+    color: #e34f26;
+}
+
+.skills-icons .fa-css3-alt:hover {
+    color: #1572b6;
+}
+
+.skills-icons .fa-js:hover {
+    color: #f7df1e;
+}
+
+.skills-icons .fa-bootstrap:hover {
+    color: #7952b3;
+}
+
+.skills-icons .fa-react:hover {
+    color: #61dafb;
+}
+
+.skills-icons .fa-node:hover {
+    color: #339933;
+}
+
+.skills-icons .fa-php:hover {
+    color: #777bb4;
+}
+
+.skills-icons .fa-java:hover {
+    color: #007396;
+}
+
+.skills-icons .fa-github:hover {
+    color: #181717;
+}
+
+.skills-icons .fa-wix:hover {
+    color: #ff5722;
+}
+
+.skills-icons .fa-wordpress:hover {
+    color: #21759b;
+}
+
+/****************** WIDGET 3 */
+.widget3 {
+    height: 100%;
+    height: 32%;
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 0.8rem;
+}
+
+.tread {
+    border-radius: 12px;
+    background-color: var(--color-black);
+    width: 50%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 1rem;
+    gap: 0.8rem;
+}
+
+.text-tread {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.text-tread h1 {
+    padding-bottom: 0.3rem;
+    color: var(--color-white);
+    font-weight: bold;
+    font-size: 1rem;
+}
+
+.text-tread span {
+    color: #fafafab4;
+    font-size: 0.8rem;
+}
+
+.img-tread {
+    width: 100%;
+    height: 100px;
+    background-image: url(/img/tread-skateboard.jpg);
+    background-position: center;
+    background-size: 100%;
+    background-repeat: no-repeat;
+    border-radius: 8px;
+}
+
+.img-tread img {
+    width: 50%;
+}
+
+.redes-sociais {
+    border-radius: 12px;
+    width: 50%;
+    height: 185px;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    gap: 15px;
+}
+
+.redes-sociais a {
+    background-color: var(--color-black);
+    border-radius: 10px;
+    width: 45%;
+    height: 45%;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+}
+
+.redes-sociais i {
+    font-size: 2.8rem;
+    color: var(--color-white);
+}
+
+.redes-sociais .tiktok:hover i {
+    color: #000;
+    transition: color 0.3s;
+}
+
+.redes-sociais .instagram:hover i {
+    color: #E1306C;
+    transition: color 0.3s;
+}
+
+.redes-sociais .github:hover i {
+    color: #000;
+    transition: color 0.3s;
+}
+
+.redes-sociais .linkedin:hover i {
+    color: #0077B5;
+    transition: color 0.3s;
+}
+
+/****************** WIDGET 4 */
+.widget4 {
+    width: 100%;
+    height: 16%;
+    background-color: var(--color-green);
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--color-black);
+    padding: 1rem;
+}
+
+.meu-site {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: start;
+    gap: .8rem;
+}
+
+.meu-site img {
+    width: 50px;
+    height: 50px;
+}
+
+.meu-site h1 {
+    font-weight: bold;
+    font-size: 1.2rem;
+    color: var(--color-black);
+}
+
+/****************** WIDGET 5 */
+.widget5 {
+    width: 100%;
+    height: 16%;
+    background-color: var(--color-black);
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--color-white);
+    padding: 1rem;
+}
+
+.freelancer {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: start;
+    gap: .8rem;
+}
+
+.freelancer img {
+    width: 50px;
+    height: 50px;
+}
+
+.freelancer h1 {
+    font-weight: bold;
+    font-size: 1.2rem;
+    color: var(--color-white);
+}
+
+/****************** WIDGET 6 */
+.widget6 {
+    width: 100%;
+    height: 32%;
+    border-radius: 12px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1rem;
+}
+
+.widget6 span {
+    color: #fafafab4;
+    font-size: 1rem;
+    padding-top: 1rem;
+}
+
+/* ANIMAÇÕES */
+.widget1,
+.widget2,
+.tread,
+.box-social,
+.widget4,
+.widget5 {
+    transition: transform 0.3s ease;
+}
+
+.widget1:hover,
+.widget2:hover,
+.tread:hover,
+.box-social:hover,
+.widget4:hover,
+.widget5:hover {
+    transform: translateY(-5px);
+}
+
+@keyframes rotate {
+    from {
+        transform: rotate(0deg);
+    }
+
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+@keyframes pulse {
+
+    0%,
+    100% {
+        transform: scale(1);
+    }
+
+    50% {
+        transform: scale(1.1);
+    }
+}
+
+.meu-site img,
+.freelancer img {
+    animation: pulse 3s infinite ease-in-out;
+}
